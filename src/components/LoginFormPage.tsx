@@ -25,6 +25,16 @@ const LoginFormPage: React.FunctionComponent = () => {
         try {
             event.preventDefault();
             setIsShowLoader(true);
+            for(let key in formToSend){
+                const input=loginInputs.find(input=>input.name===key);
+                if(input){
+                    if(!input.regExp.test(formToSend[key])){
+                        setErrMsg(`input data in ${key} row is not valid`);
+                        setIsShowLoader(false);
+                        return;
+                    }
+                }
+            }
             const response = await fetch('https://tager.dev.ozitag.com/api/auth/user', {
                 method: 'POST',
                 headers: {
