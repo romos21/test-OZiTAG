@@ -1,0 +1,32 @@
+.input-row-sec{
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.label-el{
+    align-self: center;
+    justify-self: flex-start;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #282c34;
+}
+
+.input-area{
+    border: 5px solid #61dafb;
+    border-radius: 10px;
+    color: #61dafb;
+    outline: none;
+    padding: 10px;
+}
+
+.is-valid{
+    background-color: #60ea54;
+    color: #167502;
+}
+
+.not-valid{
+    background-color: #e06e6e;
+    color: #c60000;
+}

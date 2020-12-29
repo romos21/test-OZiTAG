@@ -1,0 +1,53 @@
+.log-out-popup-sec{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.log-out-popup-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+            'msg msg'
+            'no-btn yes-btn';
+    grid-gap: 15px;
+    padding: 100px;
+    border: 5px solid #fff;
+    color: #fff;
+}
+
+.log-out-popup-msg{
+    grid-area: msg;
+}
+
+.log-out-popup-btn{
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.log-out-popup-btn:hover{
+    background-color: #282c34;
+    color: #61dafb;
+    transform: scale(1.2);
+    font-size: 25px;
+}
+
+.yes{
+    grid-area: yes-btn;
+}
+
+.no{
+    grid-area: no-btn;
+}
