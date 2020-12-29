@@ -23,7 +23,8 @@ const LoginFormPage: React.FunctionComponent = () => {
 
     const sendAuthData = async (event: React.MouseEvent) => {
         try {
-            event.preventDefault();
+            event.preventDefault()
+            setErrMsg('');
             setIsShowLoader(true);
             for(let key in formToSend){
                 const input=loginInputs.find(input=>input.name===key);

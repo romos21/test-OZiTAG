@@ -16,8 +16,9 @@ const UserPage: React.FunctionComponent = () => {
 
     useEffect(() => {
         (async function fetchUserInfo() {
-            setIsShowLoader(true);
             try {
+                setErrMsg('');
+                setIsShowLoader(true);
                 const response = await fetch('https://tager.dev.ozitag.com/api/tager/user/profile', {
                     method: 'GET',
                     headers: {
